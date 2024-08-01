@@ -42,7 +42,7 @@ public class UserRepository {
      */
 
     public User authenticateUser(String username, String password) {
-        User user = usersByUsername.get(username);
+        User user = usersByUsername.get(username); // находим юзера по имени
         if (user != null && user.authenticate(password)) {
             return user;
         } else {
